@@ -25,20 +25,9 @@
   <%= button_to "Destroy Comment", article_comment_url(comment.article, comment),
                 method: :delete,
                 data: { confirm: "Are you sure?" } %>
+  <%= link_to "Edit Comment", edit_article_comment_path(comment.article, comment) %></li>
 <% end %>
 
 
 <h2>Add a comment:</h2>
-<%= form_with model: [@article, @article.comments.build] do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render "comment_form", article: @article, comment: @article.comments.build %>
