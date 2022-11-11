@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
   def article
-    @article = Article.find(params[:article_id])
+    @article ||= Article.find(params[:article_id])
   end
 
   def comment
-    @comment = article.comments.find(params[:id])
+    @comment ||= article.comments.find(params[:id])
   end
 
   def new
