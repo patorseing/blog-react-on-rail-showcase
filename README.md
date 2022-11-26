@@ -4,7 +4,8 @@ This repository which I mean to learn ruby involved:
 
 - [x] MCV application
 - [/] unit test backend (RSpec)
-
+  - [/] test model
+  - [ ] test controller
   - add rubocop gem
 
     ** run before committing and fix the recommendation
@@ -14,7 +15,7 @@ This repository which I mean to learn ruby involved:
     ```
 
 - [ ] integrate with Reactjs and tailwindcss (ts) with ViteJs
-- [ ] FE: unit jest
+- [ ] FE: add jest
 
 - learn about Gem
   - [ ] Add Grep gem (API, JSON)
@@ -30,3 +31,5 @@ This repository which I mean to learn ruby involved:
   - [ ] set up Github action
   - [ ] set up Circle CI
   - [ ] set up AWS
+
+***every task and step; will have unit tests***
