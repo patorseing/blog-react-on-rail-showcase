@@ -13,8 +13,7 @@ This repository which I mean to learn ruby involved:
         bundle exec rubocop -a .
     ```
 
-- [ ] integrate with Reactjs (ts)
-- [ ] integrate with tailwindcss
+- [ ] integrate with Reactjs and tailwindcss (ts) with ViteJs
 - [ ] FE: unit jest
 
 - learn about Gem
