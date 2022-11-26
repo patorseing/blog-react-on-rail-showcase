@@ -14,6 +14,7 @@ This repository which I mean to learn ruby involved:
     ```
 
 - [ ] integrate with Reactjs (ts)
+- [ ] integrate with tailwindcss
 - [ ] FE: unit jest
 
 - learn about Gem
