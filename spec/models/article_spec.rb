@@ -11,12 +11,13 @@ RSpec.describe Article, type: :model do
 
   describe 'validations' do
     before { create(:article) }
+
     it { is_expected.to validate_presence_of :title }
     it { is_expected.to validate_presence_of :body }
-    it { should validate_length_of(:body).is_at_least(10).on(:create) }
+    it { is_expected validate_length_of(:body).is_at_least(10).on(:create) }
   end
 
   describe 'associations' do
-    it { should have_many(:comments).dependent(:destroy) }
+    it { is_expected have_many(:comments).dependent(:destroy) }
   end
 end
