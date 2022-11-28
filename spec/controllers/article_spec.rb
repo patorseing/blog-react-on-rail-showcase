@@ -44,4 +44,33 @@ RSpec.describe ArticlesController, type: :controller do
       expect(assigns(:article).body).to eq nil
     end
   end
+
+  describe 'POST #create' do
+    subject { post :create, params: params }
+    let(:params) { { article: { title: 'test title', body: '12345678910' } } }
+
+    context 'creates a new article successfully' do
+      it { is_expected.to have_http_status(302) }
+      it { is_expected.to redirect_to article_path(assigns(:article)) }
+
+      it 'creates a new article' do
+        subject
+
+        expect(Article.last.title).to eq 'test title'
+        expect(Article.last.body).to eq '12345678910'
+      end
+
+      it 'change count of article' do
+        expect { subject }.to change { Article.count }.by(1)
+      end
+    end
+
+    context 'connot create a new article' do
+      before do
+        params[:article].except!(:title)
+      end
+
+      it { is_expected.to render_template('new') }
+    end
+  end
 end
