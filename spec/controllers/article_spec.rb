@@ -73,4 +73,28 @@ RSpec.describe ArticlesController, type: :controller do
       it { is_expected.to render_template('new') }
     end
   end
+
+  describe 'GET #edit' do
+    context 'found the article which will be updated' do
+      let(:params) { { id: article1.id } }
+      subject { get :edit, params: params }
+
+      it { is_expected.to have_http_status(:ok) }
+      it { is_expected.to render_template('edit') }
+
+      it 'returns the article' do
+        subject
+        expect(assigns(:article)).to eq article1
+      end
+    end
+
+    context 'connot find the article' do
+      let(:params) { { id: 999_999 } }
+      subject { get :edit, params: params }
+
+      it 'returns an error' do
+        expect { subject }.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
+  end
 end
