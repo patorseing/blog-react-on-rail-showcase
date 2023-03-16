@@ -1,32 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository which I mean to learn ruby involved:
 
-Things you may want to cover:
+- [x] MCV application
+- [/] unit test backend (RSpec)
 
-- Ruby version
+  - [/] test model
+  - [ ] test controller
+  - add rubocop gem
 
-- System dependencies
+    \*\* run before committing and fix the recommendation
 
-- Configuration
+    ```Shell
+        bundle exec rubocop -a .
+    ```
 
-- Database creation
+<!-- - [ ] integrate with Reactjs and tailwindcss (ts) with ViteJs
+- [ ] FE: add jest
 
-- Database initialization
+- learn about Gem
+  - [ ] Add Grep gem (API, JSON)
+  - [ ] Add devise gem auth
+  - [ ] Add kaminari gem (paginator)
+  - [ ] Add pg_search gem (Search Filter)
+  - [ ] Add carrierwave/fog/minio (User Avatar)
+  - [ ] Add sidekiq-pro (cron and mailer support)
+  - [ ] Add Pundit (policy)
 
-- How to run the test suite
+- learn to deploy on AWS and circle CI
+  - [ ] set up docker
+  - [ ] set up Github action
+  - [ ] set up Circle CI
+  - [ ] set up AWS -->
 
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
-
-## Note
-
-- After commit the code should run
-
-```Shell
-    bundle exec rubocop
-```
+**_every task and step; will have unit tests_**
